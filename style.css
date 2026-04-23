@@ -1,3 +1,26 @@
+/* Глобальный фикс для мобилок */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1, h2 {
+        font-size: 28px !important; /* Уменьшаем гигантские заголовки */
+    }
+
+    /* Все гриды и флексы выстраиваем в колонку */
+    .hero-grid, .footer-grid, .break-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+
+    .hero-photo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+
 /* Базовые настройки и цвета */
 :root {
     --bg-color: #FAFAFA; /* Молочный фон */
@@ -991,20 +1014,23 @@ section {
 }
 
 .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
     text-decoration: none;
     color: var(--text-color);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
     border: 1px solid var(--accent-color);
-    padding: 8px 12px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    font-size: 35px;
 }
 
 .social-link:hover {
     background-color: var(--gold-color);
     color: var(--white);
     border-color: var(--gold-color);
+    transform: translateY(-1.5px);
 }
 
 /* Заголовки колонок */
@@ -1290,8 +1316,8 @@ section {
 }
 
 .social-btn-premium.tg:hover {
-    border-color: #0088cc;
-    background: #f0f8ff;
+    border-color: #8a3ab9;
+    background: #ffebef;
     transform: translateY(-5px);
 }
 
@@ -1563,14 +1589,14 @@ section {
     gap: 60px;
 }
 
-/* ЭТОТ БЛОК ТЕПЕРЬ ЖЕЛЕЗОБЕТОННЫЙ */
-.price-visual-break:nth-of-type(even) .break-grid {
+/* Прямое управление через класс .reverse */
+.price-visual-break.reverse .break-grid {
     flex-direction: row-reverse !important;
 }
 
-/* На мобилках возвращаем всё в колонку */
+/* На мобилках (меньше 992px) всегда возвращаем в колонку, чтобы фото было сверху */
 @media (max-width: 992px) {
-    .price-visual-break:nth-of-type(even) .break-grid {
+    .price-visual-break.reverse .break-grid {
         flex-direction: column !important;
     }
 }
@@ -1602,5 +1628,72 @@ section {
     .break-img {
         max-width: 100%;
         min-width: unset;
+    }
+}
+
+
+.footer-bottom-info {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05); /* Тонкая линия разделения */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Тонкая линия разделения */
+
+}
+
+.appointment-text {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold-color);
+    opacity: 0.8;
+    margin: 10px 0;
+}
+
+
+
+/* Стили для активной страницы в меню */
+.nav a.active {
+    color: var(--gold-color);
+    position: relative;
+    font-weight: 600; /* Делаем чуть жирнее для акцента */
+}
+
+/* Элегантная точка или линия под активной ссылкой */
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 3px;
+    background-color: var(--gold-color);
+    border-radius: 50%;
+}
+
+/* Явно задаем порядок элементов для второго блока */
+#second-break .break-grid {
+    display: flex !important;
+    flex-direction: row !important; /* Оставляем обычный ряд */
+}
+
+#second-break .break-img {
+    order: 1 !important; /* Картинка будет первой (слева) */
+}
+
+#second-break .break-text {
+    order: 2 !important; /* Текст будет вторым (справа) */
+}
+
+/* Для мобилок возвращаем стандартный порядок (текст под фото) */
+@media (max-width: 992px) {
+    #second-break .break-grid {
+        flex-direction: column !important;
+    }
+    #second-break .break-img {
+        order: 1 !important;
+    }
+    #second-break .break-text {
+        order: 2 !important;
     }
 }

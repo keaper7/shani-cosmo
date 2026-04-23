@@ -76,3 +76,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+// Принудительный скролл вверх при перезагрузке страницы
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
