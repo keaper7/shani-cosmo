@@ -274,7 +274,7 @@ section {
 
 .hero-watermark {
     position: absolute;
-    top: 18%;
+    top: 7%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 13vw; 
@@ -287,6 +287,21 @@ section {
     user-select: none;
     text-transform: uppercase;
 }
+
+.hero-watermark.secondary {
+    top: 70%;
+    left: 6%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%) rotate(-90deg) !important;
+}
+.hero-watermark.abo {
+    top: 72% !important;
+    left: 18% !important;
+    opacity: 0.2;
+    transform: translate(-50%, -50%) rotate(-90deg) !important;
+}
+.hero-watermark.cont {top: 18% !important;}
+
 
 .hero-stats {
     display: flex;
@@ -369,6 +384,7 @@ section {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.8s ease-out;
+    overflow: hidden;
 }
 
 .accordion-item.active .accordion-content {
@@ -728,7 +744,8 @@ section {
 
 .value-card:hover {
     background: var(--accent-color);
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
+    transition: all 0.3s ease;
 }
 
 .value-number {
@@ -772,9 +789,10 @@ section {
 }
 
 .service-mini-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
     border-color: var(--accent-color);
     box-shadow: 0 20px 40px rgba(184, 159, 125, 0.1);
+    transition: all 0.5s ease !important;
 }
 
 .service-icon {
@@ -1087,7 +1105,8 @@ section {
 .review-card:hover {
     background: var(--white);
     box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-    transform: translateY(-5px);
+    transform: translateY(-5px) !important;
+    transition: all 0.5s ease;
 }
 
 .quote-icon {
@@ -1435,7 +1454,8 @@ section {
     .contact-details-list { grid-template-columns: 1fr; }
     .social-actions { justify-content: center; }
     
-    .watermark-vertical { font-size: 100px; right: 0; top: 0; }
+    .watermark-vertical { font-size: 100px; right: 0; top: 100px; opacity: 0.2;}
+    .hero-watermark.secondary {color: #FFFFFF;}
     
     .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .footer-about { margin: 0 auto 30px; }

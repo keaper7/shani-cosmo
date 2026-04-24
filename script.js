@@ -18,28 +18,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 
 
-// Находим все заголовки аккордеона
-const headers = document.querySelectorAll('.accordion-header');
-
-headers.forEach(header => {
-    header.addEventListener('click', () => {
-        // Находим карточку, внутри которой находится этот заголовок
-        const currentItem = header.parentElement;
-        
-        // Включаем или выключаем класс 'active'
-        currentItem.classList.toggle('active');
-    });
-});
-
-// Анимация поднятия надписи 
-window.addEventListener('scroll', function() {
-    const watermark = document.querySelector('.hero-watermark');
-    let scrollPosition = window.pageYOffset;
-    watermark.style.transform = 'translate(-50%, calc(-50% + ' + scrollPosition * 0.4 + 'px))';
-});
-
-
-
 
 
 
@@ -84,4 +62,23 @@ window.onbeforeunload = function () {
 
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
+}
+
+
+function toggleAccordion(element) {
+    const currentItem = element.parentElement; // Находим сам блок услуги (.accordion-item)
+    const allItems = document.querySelectorAll('.accordion-item');
+
+    // Если мы нажимаем на уже открытый элемент — просто закрываем его
+    if (currentItem.classList.contains('active')) {
+        currentItem.classList.remove('active');
+    } else {
+        // Иначе: сначала закрываем ВООБЩЕ ВСЕ открытые вкладки
+        allItems.forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // И только потом открываем ту, на которую нажали
+        currentItem.classList.add('active');
+    }
 }
