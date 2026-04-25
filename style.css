@@ -1321,7 +1321,7 @@ section {
 
 .footer-logo {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 14px;
     line-height: 1;
 }
 
@@ -1337,6 +1337,7 @@ section {
     line-height: 1.7;
     max-width: 300px;
     margin-bottom: 30px;
+    margin-top: 0px;
 }
 
 .footer-socials {
@@ -1369,6 +1370,7 @@ section {
     font-size: 22px;
     margin-bottom: 25px;
     color: var(--text-color);
+    margin-top: 0px;
 }
 
 .footer-links, .footer-info {
@@ -1378,7 +1380,7 @@ section {
 }
 
 .footer-links li, .footer-info li {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     font-size: 15px;
     color: #555;
 }
