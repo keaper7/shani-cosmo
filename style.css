@@ -13,7 +13,7 @@
 
 body {
     margin: 0;
-    padding-top: 80px; /* ФИКС: Отступ под фиксированный хедер */
+    padding-top: 80px;
     font-family: var(--font-text);
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -23,7 +23,7 @@ body {
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* Скрывает всё, что вылезает за край по горизонтали */
+    overflow-x: hidden;
     position: relative;
 
 }
@@ -44,7 +44,7 @@ h1, h2, h3 {
 
 section {
     padding: 80px 0;
-    background: transparent !important; /* ФИКС для пудрового свечения */
+    background: transparent !important;
 }
 
 .text-center { 
@@ -56,27 +56,25 @@ section {
    ========================================================================== */
 
 
-/* 1. Глобальный фикс для всех элементов (ОБЯЗАТЕЛЬНО) */
 * {
     box-sizing: border-box;
 }
 
-/* 3. Фикс Хедера */
 .header {
-    position: fixed; /* Жестко прибиваем к экрану */
-    top: 0;          /* Точно в самый верх */
+    position: fixed;
+    top: 0;         
     left: 0;
     width: 100%;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    height: 80px;    /* Убедись, что высота зафиксирована */
+    height: 80px;   
 }
 
 
 
 .header {
-    position: fixed; /* ФИКС: Закрепляем шапку */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -84,7 +82,7 @@ section {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 15px 0; /* Добавил легкий внутренний отступ для эстетики */
+    padding: 15px 0; 
 }
 
 .header .container {
@@ -116,7 +114,6 @@ section {
     color: var(--gold-color);
 }
 
-/* Активная страница в меню */
 .nav a.active {
     color: var(--gold-color);
     position: relative;
@@ -407,7 +404,6 @@ section {
     border-top-color: var(--accent-color);
 }
 
-/* Списки внутри прайса */
 .price-list {
     list-style: none;
     padding: 0;
@@ -418,7 +414,7 @@ section {
 .price-list li {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* ФИКС: Выравнивание цены по нижней линии */
+    align-items: flex-end;
     margin-bottom: 12px;
     border-bottom: 1px dashed var(--accent-color); 
     padding-bottom: 5px;
@@ -436,8 +432,8 @@ section {
 .price-list .price {
     font-weight: 600;
     color: var(--gold-color);
-    white-space: nowrap; /* ФИКС: Запрет переноса цены и знака рубля */
-    flex-shrink: 0; /* ФИКС: Запрет сжатия колонки с ценой */
+    white-space: nowrap;
+    flex-shrink: 0;
     margin-left: 15px;
 }
 
@@ -658,7 +654,7 @@ section {
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* Таймлайн */
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -961,7 +957,7 @@ section {
     transform: scale(1.05);
 }
 
-/* Creative Contacts (если используется) */
+
 .contacts-creative {
     background: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
     min-height: 80vh;
@@ -1423,10 +1419,9 @@ section {
 
 /* ==========================================================================
    14. АДАПТИВ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (МЕДИАЗАПРОСЫ)
-   ВНИМАНИЕ: Они ВСЕГДА должны быть в самом конце файла!
    ========================================================================== */
 
-/* ПЛАНШЕТЫ И ТЕЛЕФОНЫ (меньше 992px) */
+/* ПЛАНШЕТЫ И ТЕЛЕФОНЫ */
 @media (max-width: 992px) {
     .about-wrapper { flex-direction: column; gap: 60px; text-align: center; }
     .about-wrapper h1 { text-align: center !important; }
@@ -1463,7 +1458,6 @@ section {
     .footer-about { margin: 0 auto 30px; }
     .footer-socials { justify-content: center; }
 
-    /* ФИКС: Шахматные блоки на мобилках ВСЕГДА фото сверху, текст снизу */
     .break-grid, 
     .price-visual-break.reverse .break-grid,
     #second-break .break-grid {
@@ -1480,7 +1474,7 @@ section {
     #second-break .break-text { order: 2 !important; }
 }
 
-/* СТАНДАРТНЫЕ ТЕЛЕФОНЫ (меньше 768px) */
+/* ТЕЛЕФОНЫ */
 @media (max-width: 768px) {
     .container { padding: 0 15px; }
     
@@ -1495,7 +1489,6 @@ section {
     .info-line { flex-direction: column; gap: 10px; }
     .info-line .separator { display: none; }
 
-    /* ФИКС: Выстраиваем хедер на мобильных */
     .header .container {
         flex-direction: column;
         gap: 10px;
@@ -1510,15 +1503,14 @@ section {
     }
 
     .nav a {
-        margin: 0 10px; /* Убираем margin-left 25px и делаем ровные отступы */
+        margin: 0 10px;
         font-size: 12px;
         letter-spacing: 1px;
     }
 }
 
-/* МАЛЕНЬКИЕ ТЕЛЕФОНЫ (меньше 400px) */
+/* мини ТЕЛЕФОНЫ */
 @media (max-width: 480px) {
-    /* ... твои старые стили для аккордеона ... */
 
     .header .container {
         padding: 0 10px; 
@@ -1527,46 +1519,46 @@ section {
     .nav {
         display: flex;
         justify-content: center;
-        gap: 8px !important; /* Уменьшаем расстояние между ссылками */
+        gap: 8px !important;
         flex-wrap: nowrap;
     }
 
     .nav a {
-        margin-left: 0 !important; /* Убираем левый отступ, который всё портил */
-        font-size: 10px !important; /* Уменьшаем шрифт до минимума, чтобы влезло */
-        letter-spacing: 0.5px; /* Немного сужаем расстояние между буквами */
-        white-space: nowrap; /* Еще одна страховка от переноса слов */
+        margin-left: 0 !important;
+        font-size: 10px !important;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
     }
     
     .logo {
-        font-size: 18px; /* Немного уменьшаем логотип, если он тоже мешает */
+        font-size: 18px;
     }
 
     .hero-stats {
         display: flex !important;
         flex-direction: row !important;
-        justify-content: space-between !important; /* Равномерно распределяем по ширине */
-        gap: 10px !important; /* РЕЗКО уменьшаем зазор, чтобы влезло */
+        justify-content: space-between !important;
+        gap: 10px !important;
         width: 100% !important;
         max-width: 100vw !important;
         margin: 30px 0 0 0 !important;
-        padding: 0 10px !important; /* Даем небольшие отступы по бокам внутри */
+        padding: 0 10px !important;
         box-sizing: border-box !important;
     }
 
     .stat-item {
-        flex: 1 !important; /* Каждый блок берет 1/3 ширины */
+        flex: 1 !important;
         text-align: center !important;
     }
 
     .stat-item b {
-        font-size: 20px !important; /* Еще немного уменьшаем цифры */
+        font-size: 20px !important; 
     }
 
     .stat-item span {
-        font-size: 9px !important; /* Уменьшаем текст под цифрами */
+        font-size: 9px !important; 
         display: block;
-        white-space: normal; /* Разрешаем тексту переноситься на новую строку, если он длинный */
+        white-space: normal;
     }
 
     .services-brief {
@@ -1578,7 +1570,7 @@ section {
     }
     .main-footer {padding: 25px 0px 0px 0px;}
     .footer-bottom {padding-top: 10px !important;}
-    .footer-grid {margin-bottom: 20px; gap: 5px;}
+    .footer-grid {margin-bottom: 20px; gap: 30px;}
     
 
     /* ТУТ УСЛУГИ НАЧАЛО*/

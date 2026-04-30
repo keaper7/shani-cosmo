@@ -1,19 +1,17 @@
-// Находим все элементы с классом animate-on-scroll
+// все элементы с классом animate-on-scroll
 const hiddenElements = document.querySelectorAll('.animate-on-scroll');
 
-// Создаем "наблюдателя"
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         // Если элемент появился в зоне видимости экрана
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible'); // Добавляем класс, который запускает CSS-анимацию
+            entry.target.classList.add('visible'); // тогда добавляю класс, который запускает CSS-анимацию
         }
     });
 }, {
     threshold: 0.1 // Сработает, когда хотя бы 10% блока покажется на экране
 });
 
-// Указываем наблюдателю следить за каждым элементом из списка
 hiddenElements.forEach((el) => observer.observe(el));
 
 
@@ -22,19 +20,17 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. Плавное появление элементов при скролле
+    //  плавное появление элементов при скролле
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Элемент начнет появляться, когда на экране покажется 15% его высоты
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Если хочешь, чтобы анимация срабатывала только один раз, раскомментируй строку ниже:
-                // observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
@@ -43,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(elem);
     });
 
-    // 2. Параллакс для вотермарков (чтобы слова BACKGROUND двигались)
+    // параллакс для вотермарков 
     window.addEventListener('scroll', function() {
         const watermarks = document.querySelectorAll('.hero-watermark');
         let scrollPosition = window.pageYOffset;
@@ -55,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Принудительный скролл вверх при перезагрузке страницы
+// скролл вверх при перезагрузке страницы
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
@@ -66,19 +62,19 @@ if ('scrollRestoration' in history) {
 
 
 function toggleAccordion(element) {
-    const currentItem = element.parentElement; // Находим сам блок услуги (.accordion-item)
+    const currentItem = element.parentElement;
     const allItems = document.querySelectorAll('.accordion-item');
 
-    // Если мы нажимаем на уже открытый элемент — просто закрываем его
+    // если нажимаю на уже открытый элемент, просто закрываю его
     if (currentItem.classList.contains('active')) {
         currentItem.classList.remove('active');
     } else {
-        // Иначе: сначала закрываем ВООБЩЕ ВСЕ открытые вкладки
+        // иначе сначала закрываю все открытые вкладки
         allItems.forEach(item => {
             item.classList.remove('active');
         });
 
-        // И только потом открываем ту, на которую нажали
+        // и только потом открываем ту, на которую нажали
         currentItem.classList.add('active');
     }
 }
