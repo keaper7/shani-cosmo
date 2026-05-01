@@ -1,7 +1,6 @@
 /* ==========================================================================
    1. БАЗОВЫЕ НАСТРОЙКИ И ПЕРЕМЕННЫЕ
-   ========================================================================== */
-:root {
+   ========================================================================== */   :root {
     --bg-color: #FAFAFA; /* Молочный фон */
     --text-color: #333333; /* Мягкий черный */
     --accent-color: #E3D5CA; /* Пудровый */
@@ -9,6 +8,25 @@
     --white: #FFFFFF;
     --font-heading: 'Cormorant Garamond', serif;
     --font-text: 'Montserrat', sans-serif;
+}
+
+.seven {
+    display: inline-block;
+    font-family: var(--font-text);
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #999;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.seven:hover {
+    color: var(--text-color);
+    transform: scale(1.05);
+    letter-spacing: 5px;
+}
+.seven:active {
+    transform: translateY(-1px);
+    transition: 0.1s;
+    opacity: 0.7;
 }
 
 body {
