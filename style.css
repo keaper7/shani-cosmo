@@ -887,13 +887,14 @@ section {
 
 .social-btn-premium {
     flex: 1;
-    min-width: 100px;
+    min-width: 120px;
     padding: 20px;
     border-radius: 15px;
     text-decoration: none;
     border: 1px solid var(--accent-color);
     transition: all 0.4s ease;
     background: var(--white);
+    text-align: center;
 }
 
 .social-btn-premium .btn-text {
@@ -1534,7 +1535,7 @@ section {
     .info-line { flex-direction: column; gap: 10px; }
     .info-line .separator { display: none; }
 
-    .header { padding: 15px 0px !important;}
+    .header { padding: 15px 0px !important; height: 80px;}
     .header .container {
         flex-direction: column;
         gap: 0px;
