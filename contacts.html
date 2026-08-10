@@ -3,37 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Dr_shanicosmo</title>
+    <meta name="theme-color" content="#FAF8F6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1786402638">
+    <link rel="stylesheet" href="style-v2.css?v=1786402638">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <noscript><style>[data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}.preloader{display:none!important}.w-in{transform:none!important;opacity:1!important}[data-reveal="curtain"]::after{display:none!important}</style></noscript>
+
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="pl-inner">
+            <span class="pl-logo">dr_shanicosmo</span>
+            <span class="pl-track"><i></i></span>
+        </div>
+    </div>
+
+    <div class="glow-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
+
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">dr_shanicosmo</a>
-            <nav class="nav">
+            <nav class="nav" id="mainNav">
                 <a href="index.html">Главная</a>
                 <a href="about.html">Обо мне</a>
                 <a href="services.html">Услуги</a>
                 <a href="contacts.html" class="active">Контакты</a>
             </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+
 
     <section class="contacts-premium">
-        <div class="hero-watermark cont">CONTACTS</div>
+        <div class="hero-watermark cont" data-parallax="0.16">CONTACTS</div>
 
         <div class="container">
             <div class="contacts-grid">
                 
-                <div class="contacts-text-side animate-on-scroll">
-                    <span class="sub-title">Свяжитесь со мной</span>
-                    <h1 class="hero-title">Запись на <span>консультацию</span></h1>
-                    <p class="hero-subtitle">Мы готовы ответить на ваши вопросы. Выберите любой удобный мессенджер для быстрой записи.</p>
+                <div class="contacts-text-side">
+                    <span class="sub-title" data-reveal="up">Свяжитесь со мной</span>
+                    <h1 class="hero-title" data-split="words">Запись на <span>консультацию</span></h1>
+                    <p class="hero-subtitle" data-reveal="up" data-reveal-delay="0.3">Мы готовы ответить на ваши вопросы. Выберите любой удобный мессенджер для быстрой записи.</p>
                     
-                    <div class="social-actions">
+                    <div class="social-actions" data-reveal-stagger="up">
                         <a target="_blank" href="https://wa.me/79034262401" class="social-btn-premium wa">
                             <span class="btn-text">WhatsApp</span>
                             <!-- <span class="btn-sub">Отвечу быстро</span> -->
@@ -48,14 +78,16 @@
                         </a>
                     </div>
 
-                    <div class="footer-bottom-info">
+                    <div class="footer-bottom-info" data-reveal="up">
                         <p class="appointment-text">Приём ведется строго по предварительной записи</p>
                     </div>
                 </div>
 
-                <div class="contacts-image-side animate-on-scroll">
+                <div class="contacts-image-side">
                     <div class="contact-img-box">
-                        <img src="img/img-4.JPG" alt="Эстетика кабинета" class="contact-main-img">
+                        <div class="img-clip" data-reveal="curtain" data-reveal-delay="0.15">
+                            <img src="img/img-4.JPG" alt="Эстетика кабинета" class="contact-main-img" data-parallax="-0.05" loading="lazy" decoding="async">
+                        </div>
                         <div class="contact-blob"></div>
                     </div>
                 </div>
@@ -66,6 +98,7 @@
 
     <section class="contacts-visual-footer">
         <div class="ticker-wrap">
+            <div class="ticker-inner">
             <div class="ticker">
                 <span>NATURAL BEAUTY • PROFESSIONAL CARE • ESTHETICS • </span>
                 <span>NATURAL BEAUTY • PROFESSIONAL CARE • ESTHETICS • </span>
@@ -80,13 +113,14 @@
                 <span>NATURAL BEAUTY • PROFESSIONAL CARE • ESTHETICS • </span>
                 <span>NATURAL BEAUTY • PROFESSIONAL CARE • ESTHETICS • </span>
             </div>
+            </div>
         </div>
 
         <div class="container">
-            <div class="quote-block animate-on-scroll">
+            <div class="quote-block">
                 <div class="quote-content">
-                    <img src="img/img-3.JPG" alt="Эстетика" class="quote-img">
-                    <h2 class="quote-text">Красота начинается с решения <br><span>быть собой</span></h2>
+                    <img src="img/img-3.JPG" alt="Эстетика" class="quote-img" data-reveal="scale" loading="lazy" decoding="async">
+                    <h2 class="quote-text" data-split="words">Красота начинается с решения <br><span>быть собой</span></h2>
                 </div>
             </div>
         </div>
@@ -125,11 +159,20 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Все права защищены. Дизайн и разработка  -  <a class="seven" target="_blank" rel="noopener noreferrer" href="https://t.me/seven_sites?text=Здравствуйте!%20👋%20Интересует%20разработка%20сайта.%20Хочу%20обсудить%20детали.">@seven_sites</a> <img src="img/seven-invite.svg" alt="telegram" style="height: 10px; opacity: 0.5;"> </p>
+                <p class="copyright">&copy; 2026 Все права защищены.</p>
+                <p class="credit">Дизайн и разработка — <a class="seven" target="_blank" rel="noopener noreferrer" href="https://sevensites.ru">@seven_sites</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Наверх">
+        <svg class="btt-ring" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <circle class="btt-track" cx="22" cy="22" r="20"></circle>
+            <circle class="btt-bar" cx="22" cy="22" r="20"></circle>
+        </svg>
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="script.js?v=1786402638"></script>
 </body>
 </html>

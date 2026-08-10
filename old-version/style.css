@@ -1261,6 +1261,17 @@ section {
     user-select: none;
 }
 
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ==========================================================================
    12. ПУДРОВОЕ СВЕЧЕНИЕ (ФОН)
    ========================================================================== */
@@ -1747,3 +1758,5 @@ section {
     .contacts-visual-footer {padding-bottom: 10px;}
     /* ТУТ КОНТАКТЫ КОНЕЦ*/
 }
+
+

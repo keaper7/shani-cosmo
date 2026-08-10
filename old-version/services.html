@@ -3,63 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Dr_shanicosmo</title>
-    <meta name="theme-color" content="#FAF8F6">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="style.css?v=2.0.1">
-    <link rel="stylesheet" href="style-v2.css?v=2.0.1">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <noscript><style>[data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}.preloader{display:none!important}.w-in{transform:none!important;opacity:1!important}[data-reveal="curtain"]::after{display:none!important}</style></noscript>
-
-    <div class="preloader" id="preloader" aria-hidden="true">
-        <div class="pl-inner">
-            <span class="pl-logo">dr_shanicosmo</span>
-            <span class="pl-track"><i></i></span>
-        </div>
-    </div>
-
-    <div class="glow-bg" aria-hidden="true">
-        <span class="blob blob-1"></span>
-        <span class="blob blob-2"></span>
-        <span class="blob blob-3"></span>
-    </div>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
-
-
-    <div class="scroll-progress" id="scrollProgress"></div>
-
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">dr_shanicosmo</a>
-            <nav class="nav" id="mainNav">
+            <nav class="nav">
                 <a href="index.html">Главная</a>
                 <a href="about.html">Обо мне</a>
                 <a href="services.html" class="active">Услуги</a>
                 <a href="contacts.html">Контакты</a>
             </nav>
-            <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
         </div>
     </header>
-    <div class="nav-backdrop" id="navBackdrop"></div>
-    <nav class="section-dots" id="sectionDots" aria-label="Разделы страницы"></nav>
-
 
     <section class="services-hero">
-        <div class="watermark-vertical" data-parallax="0.1">PRICELIST</div>
-        <div class="hero-watermark secondary" data-parallax="0.14">AESTHETICS</div>
+        <div class="watermark-vertical">PRICELIST</div>
+        <div class="hero-watermark secondary">AESTHETICS</div>
         
-        <div class="container">
-            <span class="sub-title text-center" data-reveal="up" style="display: block;">Прайс-лист</span>
-            <h1 class="text-center hero-title" data-split="words">Услуги и <span>цены</span></h1>
+        <div class="container animate-on-scroll">
+            <span class="sub-title text-center" style="display: block;">Прайс-лист</span>
+            <h1 class="text-center hero-title">Услуги и <span>цены</span></h1>
             <p class="text-center" style="max-width: 600px; margin: 20px auto 0; color: #666;">
                 <!-- Все процедуры проводятся с использованием сертифицированных препаратов премиум-класса. -->
             </p>
@@ -67,10 +36,10 @@
     </section>
 
     <section class="head-price">
-        <div class="container">            
+        <div class="container animate-on-scroll">            
             <div class="price-container">
 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         1. Контурная пластика губ <span class="icon">+</span>
                     </div>
@@ -87,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         2. Расщепление / Выведение филлера: <span class="icon">+</span>
                     </div>
@@ -100,7 +69,7 @@
                     </div>
                 </div>
                 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         3. Ботулинотерапия <span class="icon">+</span>
                     </div>
@@ -140,7 +109,7 @@
 
                 
                 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         4. Биоревитализация и Мезотерапия <span class="icon">+</span>
                     </div>
@@ -212,7 +181,7 @@
                     </div>
                 </div>
                 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         5. Волосистая часть головы: <span class="icon">+</span>
                     </div>
@@ -226,7 +195,7 @@
                     </div>
                 </div>
                 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         6. Коллагенотерапия <span class="icon">+</span>
                     </div>
@@ -242,7 +211,7 @@
                     </div>
                 </div>
 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         7. Липолитики <span class="icon">+</span>
                     </div>
@@ -256,7 +225,7 @@
                     </div>
                 </div>
                 
-                <div class="accordion-item" data-reveal="up">
+                <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         8. Эстетическая косметология <span class="icon">+</span>
                     </div>
@@ -311,24 +280,24 @@
                     </div>
                 </div>
 
-                <div class="price-visual-break">
+                <div class="price-visual-break animate-on-scroll">
                     <div class="break-grid">
-                        <div class="break-img" data-reveal="curtain">
-                            <img src="img/img-3.jpeg" alt="Препараты" data-parallax="-0.05" loading="lazy" decoding="async">
+                        <div class="break-img">
+                            <img src="img/img-3.jpeg" alt="Препараты">
                         </div>
-                        <div class="break-text" data-reveal="up" data-reveal-delay="0.2">
+                        <div class="break-text">
                             <h3 style="color: var(--gold-color); font-size: 36px;">Качество и безопасность</h3>
                             <p>Я работаю только с проверенными брендами премиум-сегмента. Каждая упаковка препарата вскрывается строго при вас.</p>
                         </div>
                     </div>
                 </div>
 
-                <div id="second-break" class="price-visual-break">
+                <div id="second-break" class="price-visual-break animate-on-scroll">
                     <div class="break-grid">
-                        <div class="break-img" data-reveal="curtain">
-                            <img src="img/img-6.jpeg" alt="Кабинет" data-parallax="-0.05" loading="lazy" decoding="async">
+                        <div class="break-img">
+                            <img src="img/img-6.jpeg" alt="Кабинет">
                         </div>
-                        <div class="break-text" data-reveal="up" data-reveal-delay="0.2">
+                        <div class="break-text">
                             <h3 style="color: var(--gold-color); font-size: 36px;">Атмосфера заботы</h3>
                             <p>Ваш комфорт — мой приоритет. Процедуры проходят в уютном, стерильном кабинете, где вы сможете полностью расслабиться и довериться профессионалу.</p>
                         </div>
@@ -342,10 +311,10 @@
 
     <!-- Частые вопросы начало -->
     <section class="faq" style="background-color: var(--bg-color);">
-        <section class="faq-section">
-            <h2 class="text-center faq-title" data-split="words">Частые вопросы</h2>
+        <section class="faq-section animate-on-scroll">
+            <h2 class="text-center" style="font-size: 40px; margin-bottom: 40px;">Частые вопросы</h2>
             <div class="container">
-                <div class="faq-wrapper" data-reveal-stagger="up">
+                <div class="faq-wrapper">
 
                     <div class="faq-item accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -427,12 +396,12 @@
 
 
     <!-- Запись начало -->
-    <section class="cta-section text-center" data-reveal="up">
+    <section class="cta-section text-center animate-on-scroll">
         <div class="container">
             <div class="cta-box">
-                <h2 class="cta-title">Остались сомнения?</h2>
-                <p class="cta-text">Напишите нам, и мы подберем процедуру, которая подойдет именно вам.</p>
-                <a href="contacts.html" class="btn magnetic">Записаться на прием</a>
+                <h2 style="font-size: 32px; margin-bottom: 15px;">Остались сомнения?</h2>
+                <p style="margin-bottom: 30px; font-size: 16px;">Напишите нам, и мы подберем процедуру, которая подойдет именно вам.</p>
+                <a href="contacts.html" class="btn">Записаться на прием</a>
             </div>
         </div>
     </section>
@@ -470,19 +439,11 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Все права защищены. Дизайн и разработка  -  <a class="seven" target="_blank" rel="noopener noreferrer" href="https://t.me/seven_sites?text=Здравствуйте!%20👋%20Интересует%20разработка%20сайта.%20Хочу%20обсудить%20детали.">@seven_sites</a> <img src="img/seven-invite.svg" alt="telegram" style="height: 10px; opacity: 0.5;" loading="lazy" decoding="async"> </p>
+                <p>&copy; 2026 Все права защищены. Дизайн и разработка  -  <a class="seven" target="_blank" rel="noopener noreferrer" href="https://t.me/seven_sites?text=Здравствуйте!%20👋%20Интересует%20разработка%20сайта.%20Хочу%20обсудить%20детали.">@seven_sites</a> <img src="img/seven-invite.svg" alt="telegram" style="height: 10px; opacity: 0.5;"> </p>
             </div>
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top" aria-label="Наверх">
-        <svg class="btt-ring" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
-            <circle class="btt-track" cx="22" cy="22" r="20"></circle>
-            <circle class="btt-bar" cx="22" cy="22" r="20"></circle>
-        </svg>
-        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-    </button>
-
-    <script src="script.js?v=2.0.1"></script>
+    <script src="script.js"></script>
 </body>
 </html>
