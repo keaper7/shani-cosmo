@@ -219,6 +219,9 @@ a{ color:inherit; }
   display:block; font-family:var(--serif); font-weight:500;
   font-size:20px; letter-spacing:.005em;
 }
+.hdr__name--logo{
+  font-size:18px; letter-spacing:.18em; text-transform:uppercase; white-space:nowrap;
+}
 .hdr__sub{
   display:block; font-size:9px; letter-spacing:.2em;
   text-transform:uppercase; color:var(--ink-34); margin-top:3px;
@@ -1101,6 +1104,7 @@ a{ color:inherit; }
 }
 .ftr__grid{ display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between; }
 .ftr__name{ margin:0; font-family:var(--serif); font-weight:500; font-size:23px; color:#fff; }
+.ftr__name--logo{ font-size:20px; letter-spacing:.16em; text-transform:uppercase; }
 .ftr__role{ margin:3px 0 14px; }
 .ftr__links a{ color:var(--gold); text-decoration:none; }
 .ftr__links a:hover{ text-decoration:underline; }
